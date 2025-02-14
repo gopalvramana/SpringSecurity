@@ -1,6 +1,8 @@
 package com.example.demo.controller;
 
 import com.example.demo.service.TokenService;
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -12,13 +14,18 @@ public class TokenController {
 	public TokenController(TokenService tokenService) {
 		this.tokenService = tokenService;
 	}
+	
+	@Value("${spring.security.oauth2.client.registration.auth0.client-id}")
+	private String clientId;
+	
+	@Value("${spring.security.oauth2.client.registration.auth0.client-secret}")
+	private String clientSecret;
+	
+	@Value("${spring.security.oauth2.resourceserver.jwt.audiences}")
+	private String audience;
 
 	@PostMapping("/token")
 	public String getToken() {
-		String clientId = "TM7ZF2TTGrP6TFKJBeZsXXqGmuYVSpqi";
-		String clientSecret = "B1HH6DJ8eCn2dH7OG6BrAHzCtn_g1yxcL3nVB7xerYLDFR8OQhrD2qK8P0hgEnhm";
-		String audience = "https://userapi";
-
 		return tokenService.getAuthToken(clientId, clientSecret, audience);
 	}
 }

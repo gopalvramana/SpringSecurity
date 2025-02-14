@@ -12,8 +12,8 @@ spring:
       client:
         registration:
           auth0:
-            client-id: yRY8P1XINsn8ilt5xwFZeI2kVhUyQNGd
-            client-secret: i9qQvWsrk9zzA9kxCxpSN6vq1sXn0yH65jmr8kmUZ1SM9OleDfWTSZUWitDemSkv
+            client-id: TM7ZF2TTGrP6TFKJBeZsXXqGmuYVSpqi
+            client-secret: B1HH6DJ8eCn2dH7OG6BrAHzCtn_g1yxcL3nVB7xerYLDFR8OQhrD2qK8P0hgEnhm
         provider:
           auth0:
             token-uri: https://dev-d220wagjrgvyxprf.us.auth0.com/oauth/token     
