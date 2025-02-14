@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: sbauth0client
+    
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-d220wagjrgvyxprf.us.auth0.com/
+          audiences: https://userapi         
+
+      client:
+        registration:
+          auth0:
+            client-id: yRY8P1XINsn8ilt5xwFZeI2kVhUyQNGd
+            client-secret: i9qQvWsrk9zzA9kxCxpSN6vq1sXn0yH65jmr8kmUZ1SM9OleDfWTSZUWitDemSkv
+        provider:
+          auth0:
+            token-uri: https://dev-d220wagjrgvyxprf.us.auth0.com/oauth/token     
+            
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+            
+            
+            
+          
+            
+            
+            
+
+
+
+
+        
+                     
